@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India's Scenic Wonders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>India's Scenic Wonders</h1>
+        <p>Explore the beauty of all places in India through stunning photos.</p>
+    </header>
+    
+    <nav>
+        <button class="tab active" onclick="showCategory('north')">North India</button>
+        <button class="tab" onclick="showCategory('south')">South India</button>
+        <button class="tab" onclick="showCategory('east')">East India</button>
+        <button class="tab" onclick="showCategory('west')">West India</button>
+    </nav>
+    
+    <div id="gallery">
+        <!-- North India -->
+        <div class="category" id="north">
+            <div class="photo" onclick="openLightbox('images/taj-mahal.jpg')">
+                <img src="https://via.placeholder.com/300x200?text=Taj+Mahal" alt="Taj Mahal">
+                <p>Taj Mahal, Agra</p>
+            </div>
+            <div class="photo" onclick="openLightbox('images/himalayas.jpg')">
+                <img src="https://via.placeholder.com/300x200?text=Himalayas" alt="Himalayas">
+                <p>Himalayas, Uttarakhand</p>
+            </div>
+            <!-- Add more photos here -->
+        </div>
+        
+        <!-- South India -->
+        <div class="category" id="south" style="display:none;">
+            <div class="photo" onclick="openLightbox('images/kerala-backwaters.jpg')">
+                <img src="https://via.placeholder.com/300x200?text=Kerala+Backwaters" alt="Kerala Backwaters">
+                <p>Kerala Backwaters</p>
+            </div>
+            <!-- Add more -->
+        </div>
+        
+        <!-- East India -->
+        <div class="category" id="east" style="display:none;">
+            <div class="photo" onclick="openLightbox('images/sundarbans.jpg')">
+                <img src="https://via.placeholder.com/300x200?text=Sundarbans" alt="Sundarbans">
+                <p>Sundarbans, West Bengal</p>
+            </div>
+            <!-- Add more -->
+        </div>
+        
+        <!-- West India -->
+        <div class="category" id="west" style="display:none;">
+            <div class="photo" onclick="openLightbox('images/gateway-mumbai.jpg')">
+                <img src="https://via.placeholder.com/300x200?text=Gateway+of+India" alt="Gateway of India">
+                <p>Gateway of India, Mumbai</p>
+            </div>
+            <!-- Add more -->
+        </div>
+    </div>
+    
+    <!-- Lightbox for full-size images -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 India's Scenic Wonders. Photos sourced from free stock (replace with originals).</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
